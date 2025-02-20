@@ -1,0 +1,21 @@
+<p>list-pokemon works!</p>
+
+<div class="rowStyle">
+    <div>
+        Dummy Data
+        <ul>
+            @for (pokemon of pokemons; track $index) { {{ pokemon.id }} {{ pokemon.name }} {{ pokemon.type }}
+            <br />}
+        </ul>
+    </div>
+    <div>
+        API Data
+        <ul>
+            @for (pokemonApis of pokemonsApi; track $index) {
+            <li>
+                <a href="{{ pokemonApis.url }}">{{ pokemonApis.name }}</a> <br />
+            </li>
+            }
+        </ul>
+    </div>
+</div>
